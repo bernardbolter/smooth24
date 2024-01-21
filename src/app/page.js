@@ -7,6 +7,7 @@ import { motion, AnimatePresence } from 'framer-motion'
 import CookieConsent from 'react-cookie-consent'
 
 import Intro from "@/components/Intro"
+import Projects from '@/components/Projects'
 
 const Home = () => {
   const [smooth, setSmooth] = useContext(SmoothContext)
@@ -48,8 +49,8 @@ const Home = () => {
                 transition={{ duration: 1 }}
             >
                 <Intro />
-                {/* <Projects />
-                <Contact />
+                <Projects />
+                {/* <Contact />
                 <Nav /> */}
                 <CookieConsent
                     location="bottom"
