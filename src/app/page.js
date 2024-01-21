@@ -1,95 +1,68 @@
-import Image from "next/image";
-import styles from "./page.module.css";
+"use client"
 
-export default function Home() {
+import { useEffect, useContext, useMemo } from 'react'
+import { SmoothContext } from '@/providers/SmothProvider'
+import { useWindowSize } from '@/helpers/useWindowSize'
+import { motion, AnimatePresence } from 'framer-motion'
+import CookieConsent from 'react-cookie-consent'
+
+import Intro from "@/components/Intro"
+
+const Home = () => {
+  const [smooth, setSmooth] = useContext(SmoothContext)
+  const size = useWindowSize()
+
+  useEffect(() => {
+      var borderSize
+      if (size.width < 769) {
+          borderSize = 20
+      } else {
+          borderSize = 40
+      }
+      setSmooth(state => ({ ...state, projectBorder: borderSize }))
+  }, [size, setSmooth])
+
+  const theIntroHeight = useMemo(() => {
+      if (size.width < 400) {
+          return 560
+      } else if (size.width < 500) {
+          return 600
+      } else {
+          return size.height * .8
+      }
+  }, [size])
+
+  useEffect(() => {
+      setSmooth(state => ({ ...state, introHeight: theIntroHeight }))
+  }, [theIntroHeight, setSmooth])
+
   return (
-    <main className={styles.main}>
-      <div className={styles.description}>
-        <p>
-          Get started by editing&nbsp;
-          <code className={styles.code}>src/app/page.js</code>
-        </p>
-        <div>
-          <a
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            By{" "}
-            <Image
-              src="/vercel.svg"
-              alt="Vercel Logo"
-              className={styles.vercelLogo}
-              width={100}
-              height={24}
-              priority
-            />
-          </a>
-        </div>
-      </div>
-
-      <div className={styles.center}>
-        <Image
-          className={styles.logo}
-          src="/next.svg"
-          alt="Next.js Logo"
-          width={180}
-          height={37}
-          priority
-        />
-      </div>
-
-      <div className={styles.grid}>
-        <a
-          href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Docs <span>-&gt;</span>
-          </h2>
-          <p>Find in-depth information about Next.js features and API.</p>
-        </a>
-
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Learn <span>-&gt;</span>
-          </h2>
-          <p>Learn about Next.js in an interactive course with&nbsp;quizzes!</p>
-        </a>
-
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Templates <span>-&gt;</span>
-          </h2>
-          <p>Explore starter templates for Next.js.</p>
-        </a>
-
-        <a
-          href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Deploy <span>-&gt;</span>
-          </h2>
-          <p>
-            Instantly deploy your Next.js site to a shareable URL with Vercel.
-          </p>
-        </a>
-      </div>
-    </main>
-  );
+    <AnimatePresence>
+            <motion.main 
+                className="app-container"
+                style={{
+                    background: smooth.primaryLight
+                }}
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                transition={{ duration: 1 }}
+            >
+                <Intro />
+                {/* <Projects />
+                <Contact />
+                <Nav /> */}
+                <CookieConsent
+                    location="bottom"
+                    buttonText="Accept"
+                    cookieName="smoothCookie"
+                    style={{ background: smooth.primaryDark }}
+                    buttonStyle={{ background: "grey", color: smooth.primaryLight, fontSize: "12px" }}
+                    >
+                    This website uses cookies to enhance the user experience.{" "}
+                </CookieConsent>
+            </motion.main>
+        </AnimatePresence>
+  )
 }
+
+export default Home

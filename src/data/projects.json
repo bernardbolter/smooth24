@@ -1,0 +1,47 @@
+[
+    {
+      "website": "countdowngrabowsee.de",
+      "slug": "countdown-grabowsee",
+      "link": "https://countdowngrabowsee.de",
+      "tagline": "Artist Residency located just outside of Berlin",
+      "madeWith": "Vue, Google Forms as backend, Sass, Figma",
+      "github": "https://github.com/bernardbolter/grabowsee",
+      "description": "This website was developed and designed for Countdown Grabowsee, an annual art residency located outside of Berlin. I used the Vue framework to create a website that is both visually pleasing and user-friendly. One of the noteworthy features of the website is the archive section, which is automatically updated through a system developed using Google Forms. The archive provides a history of past artists-in-residence and their work."
+    },
+    {
+      "website": "manmademastering.com",
+      "slug": "manmade-mastering",
+      "link": "https://manmademastering.com",
+      "tagline": "Vinyl Mastering Company based in Berlin",
+      "madeWith": "JQuery, Gulp, Sass, Sendgrid, Sketch, Sublime Text, Photoshop, and a little bit of PHP",
+      "github": "https://github.com/bernardbolter/manmade-skeleton",
+      "description": "Designed and built the website for ManMade Mastering, a music mastering and record cutting company based in Berlin. The company needed a clean and professional website that would showcase their services and provide an easy-to-use order form for custom records. Using basic technologies such as HTML, CSS, and jQuery JS, along with a little bit of PHP for the form, I was able to create a sleek and modern website that met all of the client's requirements. The order form is detailed and straightforward, allowing customers to easily select their desired options and submit their requests."
+    },
+    {
+      "website": "megacities.world",
+      "slug": "megacities",
+      "link": "http://megacities.world",
+      "tagline": "Composite Country Portraits, an art project using satellite images",
+      "madeWith": "React with Gatsby, D3, VScode, Figma",
+      "github": "https://github.com/bernardbolter/megacities",
+      "description": "I have designed and developed the website for my project, megacities.world, which highlights the innovative Megacity project. This project is a series of composite country portraits created by combining satellite images of the largest cities in each country into one composition. The project aims to showcase the similarities between cities and the nuances of culture when viewed from above. To create this website, I used the Gatsby React framework, which allowed me to create a fast and responsive site that beautifully showcases the Megacity project. I used D3 to visualize the entrance image on the website, which adds a unique and dynamic element to the design. Additionally, I used custom node scripts with Puppeteer to automate the satellite image acquisition process, as well as custom Photoshop scripts to handle the manipulation of the source material."
+    },
+    {
+      "website": "herbstsalon.berlin",
+      "slug": "herbst-salon",
+      "link": "http://herbstsalon.berlin",
+      "tagline": "Art Event located in the Schöneberg, Berlin",
+      "madeWith": "React with Gatsby, Contentful backend, Mapbox, VScode, Figma",
+      "github": "https://github.com/bernardbolter/herbstsalon",
+      "description": "Created the website for Herbstsalon, a community art project located in the Schöneberg district of Berlin. The project involved local artists, businesses, and residents who collaborated to create unique artistic experiences in the area, centered around the Pallaseum building. Using the Gatsby framework, I designed a visually appealing website that accurately reflected the essence of the community art project. The website features an interactive map section built with Mapbox, allowing users to take virtual tours created by some of the participating artists."
+    },
+    {
+      "website": "augustinpalm.se",
+      "slug": "augustin-palm",
+      "link": "http://www.augustinpalm.se/",
+      "tagline": "Swedish media journalist",
+      "madeWith": "Wordpress, Jquery, Sketch, Issuu Api",
+      "github": "https://github.com/bernardbolter/palm16",
+      "description": "Designed and developed the website for AugustinPalm.se, the online platform for Erik Palm, an internationally recognized Swedish journalist specializing in arts and culture. The main goal of the website was to showcase Erik's impressive collection of articles and writing, and to achieve this, we decided to use the Issuu plugin to display interactive PDFs. I built a custom WordPress template to ensure that the website functioned smoothly and would be reliable for years to come. The end result is a seamless user experience that allows visitors to easily access and read Erik's articles, and demonstrates that creating a custom theme and minimizing reliance on plugins can lead to a long-lasting and hassle-free product."
+    }
+  ]
