@@ -8,6 +8,7 @@ import CookieConsent from 'react-cookie-consent'
 
 import Intro from "@/components/Intro"
 import Projects from '@/components/Projects'
+import Contact from '@/components/Contact'
 
 const Home = () => {
   const [smooth, setSmooth] = useContext(SmoothContext)
@@ -50,8 +51,8 @@ const Home = () => {
             >
                 <Intro />
                 <Projects />
-                {/* <Contact />
-                <Nav /> */}
+                <Contact />
+                {/* <Nav /> */}
                 <CookieConsent
                     location="bottom"
                     buttonText="Accept"

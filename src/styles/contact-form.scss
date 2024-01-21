@@ -1,0 +1,146 @@
+.contact-form-container {
+    width: 90%;
+    margin: 5%;
+
+    form {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+
+    @media screen and (min-width: $tablet) {
+        width: 85%;
+        margin: 7.5%;
+    }
+
+    @media screen and (min-width: $desktop) {
+        width: 80%;
+        margin: 10%;
+    }
+
+    h1 {
+        font-size: 20px;
+        line-height: 22px;
+        font-weight: 700;
+        padding: 0;
+        margin: 0;
+    }
+
+    h2 {
+        font-family: "IBM Plexo Mono", monospace;
+        font-size: 17px;
+        padding: 0;
+        margin: 0;
+    }
+
+    p {
+        font-size: 11px;
+        font-weight: 300;
+        padding: 10px 0;
+        margin: 0;
+        opacity: .7;
+    }
+}
+
+.form-input {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-wrap: wrap;
+
+    p {
+        margin: 0;
+        padding: 0;
+        color: tomato;
+    }
+
+    label {
+        font-family: "IBM Plexo Mono", monospace;
+        font-size: 11px;
+        margin: 10px 0 0 0;
+        padding: 0;
+        text-transform: uppercase;
+    }
+
+    input {
+        -webkit-appearance: none;
+        appearance: none;
+        width: 100%;
+        border: none;
+        padding: 15px 10px;
+        background: rgba(0,0,0,.05);
+        outline: none;
+        border-bottom-right-radius: 10px;
+        margin: 0;
+        font-weight: 700;
+        font-size: 17px;
+        box-sizing: border-box;
+    }
+
+    textarea {
+        -webkit-appearance: none;
+        appearance: none;
+        width: 100%;
+        height: 150px;
+        padding: 15px;
+        border: none;
+        outline: none;
+        border-top-right-radius: 10px;
+        margin: 0;
+        font-weight: 500;
+        font-size: 17px;
+        background: rgba(0,0,0,.05);
+        box-sizing: border-box;
+    }
+}
+
+.send-button {
+    border: none;
+    font-size: 15px;
+    font-family: "IBM Plexo Mono", monospace;
+    text-transform: uppercase;
+    padding: 5px 10px;
+    margin: 10px 0 0 0;
+    cursor: pointer;
+}
+
+.form-name {
+    width: 100%;
+
+    @media screen and (min-width: 600px) {
+        width: 47.5%;
+        margin: 0 2.5% 0 0;
+    }
+}
+
+.form-email {
+    width: 100%;
+    margin: 0;
+
+    @media screen and (min-width: 600px) {
+        width: 47.5%;
+        margin: 0 0 0 2.5%;
+    }
+}
+
+.form-message {
+    width: 100%;
+}
+
+.error-message {
+    color: $error;
+    font-size: 10px;
+    opacity: 0.8;
+    margin: 3px 0 0 0;
+}
+
+.form-loader {
+    width: 40px;
+    height: 40px;
+}
+
+.form-blocks {
+    width: 60px;
+    margin-top: 10px;
+}
