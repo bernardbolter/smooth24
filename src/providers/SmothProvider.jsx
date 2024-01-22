@@ -1,7 +1,7 @@
 "use client"
 
 import React, { useState, useEffect, createContext } from 'react'
-import { randomColor } from '../helpers'
+import { randomColor, shuffle } from '../helpers'
 
 import Projects from '../data/projects.json'
 
@@ -16,7 +16,7 @@ const SmoothProvider = ({ children }) => {
         changeColor: false,
         introHeight: 0,
         projectBorder: 0,
-        projects: Projects,
+        projects: [],
         viewNavigation: true,
         viewImpressum: false,
         viewDaten: false,
@@ -35,12 +35,12 @@ const SmoothProvider = ({ children }) => {
 
     // const shuffledProjects = shuffle(Projects)
 
-    // useEffect(() => {
-    //     setSmooth(state => ({
-    //         ...state,
-    //         projects: shuffledProjects
-    //     }))
-    // }, [])
+    useEffect(() => {
+        setSmooth(state => ({
+            ...state,
+            projects: shuffle(Projects)
+        }))
+    }, [])
     
     return (
         <SmoothContext.Provider

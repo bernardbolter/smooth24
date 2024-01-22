@@ -1,4 +1,4 @@
-import React, { useContext } from 'react'
+import { useContext } from 'react'
 import { SmoothContext } from '@/providers/SmothProvider'
 import { motion } from 'framer-motion'
 import * as Scroll from 'react-scroll'
@@ -16,7 +16,7 @@ const Projects = () => {
             style={{ color: smooth.primaryColor }}
         >   
             {smooth.projects.map((project,i ) => (
-                <Project project={project} key={i} index={i} />
+                <Project project={project} key={i} index={i} suppressHydrationWarning />
             ))}
             <motion.div 
                 className="go-contact"
