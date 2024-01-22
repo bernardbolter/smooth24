@@ -49,7 +49,7 @@ const ContactForm = () => {
                     { setSubmitting, resetForm }
                   ) => {
                     setSubmitting(true)
-                    const response = await fetch('/api/mail', {
+                    const response = await fetch('/api', {
                       method: 'POST',
                       body: JSON.stringify(values)
                     })
